@@ -1,0 +1,42 @@
+
+.gallery {
+    grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+    grid-auto-flow: row;
+    gap: 20px;
+    margin-top: 3rem;
+
+}
+
+.img-gallery{
+    border-radius: 10px;
+
+}
+.gallery-title{
+    margin-top: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(41, 5, 102);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+
+
+}
+input[type="file"] {
+    display: none;
+  
+}
+.file-input-btn {
+    margin-inline-start: 40px;
+    margin-block-end: 1em;
+    border: 1px solid var(--headerClr);
+    padding: 5px;
+    border: 0.5em;
+}
+ .gallery-container label {
+    text-decoration: underline 2px var(--headerClr);
+    cursor: pointer;
+}
+
+.gallery-container label:hover {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.3em;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>MemeGen</title>
+</head>
+
+<body onload="onInit()">
+    <header class="main-header">
+        <div class="main-layout flex space-between align-center ">
+
+            <div class="logo">
+                <a href="#"><img src="LOGO/LOGO.png" class="logo-img" onclick="showGalley()"></a>
+            </div>
+            <nav class="main-nav-container">
+
+                <ul class="main-nav flex clean-list">
+                    <li onclick="showGalley()">
+                        <a href="#" class="gallery-link" onclick="showGalley()">gallery</a>
+                    </li>
+                    <span>|</span>
+                    <li onclick="showSavedMeme()">
+                        <a href="#" class="saved-meme-link" onclick="showSavedMeme()">saved meme</a>
+                    </li>
+                   
+
+                </ul>
+            </nav>
+            <button class="btn-toggle-menu" onclick="toggleMenu()">☰</button>
+
+        </div>
+    </header>
+    <section class="gallery-container main-layout">
+
+
+        <h1 class="gallery-title">Choose Template Image. Or <label for="img-upload">Upload</label></h1> 
+                <input type="file" class="file-input-btn" name="image" id="img-upload" onchange="onImgInput(event)" accept="image/*" />
+        
+        <div class="filter-area flex">
+    
+            <input type="text" list="categories" name="filter" id="filter" oninput="onSetFilter(this.value)" placeholder=" - search by keyword -">
+    
+            <datalist id="categories">
+                <option value="animals">
+                    <option value="politics">
+                    <option value="friendship">
+                    <option value="kids">
+                    <option value="movies">
+                    <option value="cool">
+                    <option value="funny">
+                    <option value="party">
+                    <option value="crazy">
+                    <option value="evil">
+            </datalist>
+            <button class="filter-btn" onclick="onCleanFilter()">X</button>
+
+        </div>
+            <ul class="keywords-container clean-list flex">
+    
+            </ul>
+        <div class="gallery grid"></div>
+        
+    </section>
+    <section class="canvas-container main-layout hidden">
+        <div class="canvas-wrapper">
+
+            <div class="editor-container grid">
+                <div class="meme-container">
+                    
+                    <canvas onmousedown="OnCanvasClicked(event)" onpointerdown="OnCanvasClicked(event)">
+                        
+                    </canvas>
+                </div>
+                
+                <div class="input-container ">
+                    <div>   
+                        
+                        <input class="text-input" type="text" placeholder="Write something..." oninput="onSetLineText()"
+                        name="txt" />
+                    </div>
+                    <div class="icons-container">
+                        <div class="carousel-view flex">
+                            
+                            <!-- Left Button -->
+                            <button id="prev-btn" class="prev-btn"> <img src="img/icons/left.png"/></button>
+                            
+                            <!-- List Container -->
+                            <div id="item-list" class="item-list">
+                                <!-- Items -->
+                                
+                            </div>
+                            
+                            <!-- Right Button -->
+                            <button id="next-btn" class="next-btn"><img src="img/icons/right.png"/> </button>
+                        </div>
+                    </div>
+                    <div class="button-area">
+                        <input class="color-input " title="Choose color" type="color"  id="color-picker" oninput="onSetColor()" name="color" />
+                       
+                        
+                        <button class="change-size-btn" title="Increase font" onclick="onChangeSize(5)"><img src="img/icons/big-font.png"></button>
+                        <button class="change-size-btn" title="Decrease font"  onclick="onChangeSize(-5)"><img src="img/icons/small-font.png"></button>
+                        <button class="add-line-btn" title="Add line" onclick="onAddLine()"><img src="img/icons/add.png"></button>
+                        <button class="switch-line-btn" title="Switch line" onclick="onSwitchLine()"><img src="img/icons/switch.png"></button>
+                        <button class="delete-btn" title="Delete" onclick="onDeleteLine()"><img src="img/icons/delete.png"></button>
+                    </div>
+                    <div class="button-area">
+
+                        <button class="save-btn" title="Save meme" onclick="onSaveMeme()"><img src="img/icons/save.png"></button>
+                        <button onclick="onShare()" class="share-api" title="Share Website"><img src="img/icons/share.png" alt=""></button>
+                        <button class="download-btn" id="downloadBtn" title="download" onclick="downloadImg()" download="my-img.jpg"><img src="img/icons/download.png"></button>
+                        <button class="shareFaceBook-btn" title="Share on facebook" onclick="onUploadImg()">
+                            <img src="img/icons/facebook.png"/>
+                        </button>
+                    </div>
+
+                        
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="saved-meme-container main-layout hidden">
+
+
+    </section>
+    <footer class="main-footer flex align-center column-direction">
+        <img class="logo-footer" src="LOGO/LOGO.png">
+        Created by Daniel Nachum
+
+    </footer>
+    <script src="js/controller/galleryController.js"></script>
+    <script src="js/controller/memeController.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/util-service.js"></script>
+</body>
+
+</html>

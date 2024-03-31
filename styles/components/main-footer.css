@@ -1,0 +1,20 @@
+.main-footer{
+    background-color: #1089f1;
+    color: rgb(191, 197, 202);
+    margin-top: 29px;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+
+
+}
+.logo-footer{
+    width: 100px;
+    height: 20px;
+}

@@ -1,0 +1,86 @@
+.main-header {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: var(--headerClr);
+    margin-bottom: 29px;
+    /* box-shadow: 0 0 4px rgba(0, 0, 0, .4); */
+    border-bottom: 3px solid rgba(0, 0, 0, .4);
+
+
+    width: 100%;
+    z-index: 1;
+
+}
+
+.main-nav {
+    gap: 5px;
+
+}
+
+ul {
+    align-self: center;
+
+}
+
+.btn-toggle-menu {
+    background: none;
+    color: rgb(203, 209, 214);
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    display: none;
+}
+
+
+.gallery-link,
+.about-link,
+span,
+.saved-meme-link {
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(203, 209, 214);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+.logo-img {
+    width: 300px;
+    height: 60px;
+}
+
+.keywords-container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex-basis: 1;
+    align-items: center;
+    grid-area: 2/1/2/2;
+}
+.keywords-container > * {
+    margin-inline-end: 0.4em;
+    cursor: pointer;
+}
+[name="filter"] {
+    display: inline-block;
+    border: 2px solid var(--headerClr);
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--headerClr);
+    border: 1px solid var(--headerClr);
+    color: rgb(231, 233, 234);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-inline-start: 2px;
+    border-radius: 0 0.5em 0.5em 0;
+}

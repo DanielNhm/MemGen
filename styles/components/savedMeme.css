@@ -1,0 +1,31 @@
+.saved-meme-container{
+    grid-template-columns: repeat(auto-fit,190px);
+    grid-auto-flow: row;
+    display: grid;
+    gap: 20px;
+    height: 90vh;
+ }
+
+ .saved-meme-container div{
+    position: relative;
+ }
+
+
+ 
+ .saved-meme-container .del-btn{
+    position: absolute;
+    top:1px;
+    right: 1px;
+    color: white;
+    background-color: var(--backgroud);
+    border:2px solid  rgb(9, 6, 6);
+    border-radius:5px;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+
+ }
+ .saved-meme-container .del-btn:hover{
+   border: 2px solid  rgb(255, 119, 0);
+ }
+

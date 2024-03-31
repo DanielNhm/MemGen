@@ -1,0 +1,25 @@
+/* SETUP  */
+
+@import 'setup/vars.css';
+@import 'setup/typography.css';
+
+/* BASE */
+
+@import 'basic/base.css';
+@import 'basic/layout.css';
+@import 'basic/helpers.css';
+
+/* @import 'basic/mq.css'; */
+
+
+/* COMPONENTS */
+
+@import 'components/editor.css';
+@import 'components/main-header.css';
+@import 'components/main-footer.css';
+@import 'components/gallery.css';
+@import 'components/savedMeme.css';
+
+/* MQ */
+
+@import 'mq/mq.css';

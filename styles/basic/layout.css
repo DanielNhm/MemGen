@@ -1,0 +1,26 @@
+.main-layout{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    /* display: grid;
+    grid-template-columns: 5rem auto 5rem;    */
+  }
+  .header-layout{
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+ /* .saved-meme-container img{
+    width: 190px;
+
+ } */
+
+
+
+/* .main-layout>*.full {
+    grid-column: 1/-1;
+}
+
+.main-layout>*:not(.full) {
+    grid-column: 2;
+} */
+
